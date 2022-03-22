@@ -1,0 +1,11 @@
+version: "3.4"
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+services:
+  host:
+    image: semtech/static-file-service
+    volumes:
+      - ./html:/data
